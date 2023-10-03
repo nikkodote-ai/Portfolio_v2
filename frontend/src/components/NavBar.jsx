@@ -6,9 +6,17 @@ import {
   MenuItem,
   Stack,
   Typography,
+  styled,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
+
+
+const StyledTypography = styled(Typography)({
+fontFamily: "Inter",
+fontSize: 17,
+
+});
 
 export const NavBar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -24,30 +32,41 @@ export const NavBar = () => {
     <>
       <Box
         sx={{
-          position: "fixed",
+          // position: "fixed",
           display: { xs: "none", md: "fixed" },
           justifyContent: "center",
-          backgroundColor: "#252525",
+          // backgroundColor: "#252525",
           width: "100vw",
           left: 0,
           top: 0,
           zIndex: 1,
         }}
       >
+        <Stack direction="column" alignItems="center"
+          alignContent={"center"}>
+           
         <Stack
           direction="row"
           spacing={15}
           alignItems="center"
           alignContent={"center"}
-          pt={0}
+          pt={1}
           height={50}
           color={"white"}
-        >
-          <Typography variant="h6">Work</Typography>
-          <Typography variant="h6">Interests</Typography>
-          <Typography variant="h6">Thoughts</Typography>
-          <Typography variant="h6">Contact</Typography>
+          >
+          <StyledTypography>WORKS</StyledTypography>
+          <StyledTypography>INTERESTS</StyledTypography>
+          <StyledTypography>THOUGHTS</StyledTypography>
+          <StyledTypography>CONTACT</StyledTypography>
         </Stack>
+
+        <Stack alignItems="center"
+          alignContent={"center"} mt={1}>
+          <Box sx={{backgroundColor: "#fff", width: "80vw", height: "1.4px"}}>
+             
+            </Box>
+          </Stack>
+          </Stack>
       </Box>
 
       <Box

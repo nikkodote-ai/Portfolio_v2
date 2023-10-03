@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import axios from "axios";
 import { useEffect, useState} from "react";
 import { Project } from "./Project";
@@ -22,27 +22,49 @@ export const ProjectList = () => {
 
   return (
     <>
+    <Stack direction="row" sx={{
+        width:"100vw",
+        backgroundColor: "#ffffff",
+      }}>
+      <Stack flex={1}  >
+        <Box pl={17} pt={20} height="100vh" width="50%" component="div" sx={{position: "sticky"}}>
+        <Typography
+        sx={{
+          fontSize:"23vh",
+          fontFamily: "viaoda libre",
+          color: "2e2e2e",
+          textTransform: "uppercase",
+          wordBreak: "break-word",
+          lineHeight: 0.85,
+        }}>Projects</Typography>
+        </Box>
+</Stack>
       <Stack
+        component="div"
+        height="100%"
+        sx={{overflow: "auto"}}
         alignItems={"center"}
         justifyContent={"center"}
         textAlign={"center"}
-      >
-        <AboutMe />
+        flex={1.2}
+        >
+        
         {/* <Typography variant="h1" mt = {{xs:3, sm:10}}>PROJECTS</Typography> */}
 
         {details.map((detail, id) => (
           <Project
-            key={id}
-            title={detail.title}
-            description={detail.description}
-            image={detail.image}
-            created_at={new Date(detail.created_at)}
-            url={detail.url}
+          key={id}
+          title={detail.title}
+          description={detail.description}
+          image={detail.image}
+          created_at={new Date(detail.created_at)}
+          url={detail.url}
           />
-        ))}
+          ))}
 
-        <Box sx={{ height:{ xs: 0, sm: "25vh"} }} />
       </Stack>
+
+          </Stack>
     </>
   );
 };

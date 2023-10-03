@@ -23,9 +23,9 @@ const StyledPaper = styled(Paper)({
 });
 
 const StyledBox = styled(Box)({
-  width: "80%",
-  margin: 20,
-  height: "45vh",
+  width: "100%",
+  margin: -1,
+  height: "100vh",
 });
 
 
@@ -35,6 +35,7 @@ const StyledTitle = styled(Typography)({
   textTransform:"uppercase",
   color: "#f9f9f9",
   lineHeight: 0.85,
+  fontFamily: "dela gothic one",
 });
 
 export const Project = (props) => {  
@@ -47,18 +48,15 @@ export const Project = (props) => {
     //  when the element is 1/3 of the way down the screen and end when it is 1/3 of the way up the screen.
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [-0.8, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [-1,2]);
   // console.log(scrollYProgress);
   // console.log(ref);
  
 
   return (
     // <>
-    <StyledBox component = {motion.div} ref={ref} style={{
-      scale: scaleProgress,
-      opacity: opacityProgress,
-     }} >
+    <StyledBox >
     <StyledPaper 
     square
     sx={{
@@ -67,11 +65,16 @@ export const Project = (props) => {
     }}
     
     >
-      <Stack direction="column" spacing={3} justifyContent={"center"} mt={1} maxWidth={"80%"}>
-      <StyledTitle sx={{fontSize:{xs: 25, sm: 30, md: 40}}}>
+      <Stack direction="column" width="inherit" height="inherit" spacing={15} alignItems={'center'} justifyContent={"center"} mt={1} maxWidth={"80%"}
+      component = {motion.div} ref={ref} style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+       }} >
+      <StyledTitle sx={{fontSize:{xs: 25, sm: 30, md: 80}}}>
         {props.title}
       </StyledTitle>
-      <Typography sx={{ color: "#ffffff", fontWeight:"100"}} noWrap>{props.description}</Typography>
+      <Box height="2px" width="120%" bgcolor="#ffffff"/>
+      <Typography sx={{ color: "#ffffff", fontWeight:"200", fontSize:"30px"}} noWrap>{props.description}</Typography>
       </Stack>
     </StyledPaper>
     </StyledBox>

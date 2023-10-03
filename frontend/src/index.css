@@ -1,7 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@200;300;400;900&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Viaoda+Libre&display=swap');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  background-color: "#484848";
+
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -12,7 +18,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --dark-gradient: linear-gradient(90deg, #000000, #111111, #222222, #333333, #444444, #555555);
+  --dark-gradient: linear-gradient(90deg, #2f2f2f, #2f2f2f);
   --dark-gradient-reverse: linear-gradient(45deg,#E3D7BD, #EBE6D9, #F6F3E7, #F1F1F1, #F0E2CE, #D3D0C9);
 }
 
@@ -25,8 +31,13 @@ a:hover {
   color: #535bf2;
 }
 
+.css-sq1x3w-MuiContainer-root {
+  padding-left: 0;
+  padding-right: 0;
+}
 
 body {
+  /* background-color: "#444444"; */
   background-image: var(--dark-gradient);
   background-size: 300%;
   /* animation: bg-animation 15s infinite alternate; */
@@ -53,6 +64,10 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+hr.white-line{
+margin-top: 45px; 
 }
 
 button {
