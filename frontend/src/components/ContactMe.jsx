@@ -5,9 +5,9 @@ import {motion} from 'framer-motion';
 
 export const ContactMe = () => {
   return (
-    <Box  textAlign={"center"} style={{color: 'white'}} mt={7}>
+    <Box  textAlign={"center"} style={{color: 'white'}} m={0} display="grid">
     {/* <Typography>Contact Me! <KeyboardDoubleArrowDown/> </Typography> */}
-        <Stack direction="row" justifyContent={"center"} alignContent={"center"}  spacing={5} pt={12}>
+        <Stack direction="row" justifyContent={"center"} alignContent={"center"}  spacing={8}>
    <Email  fontSize='large'/>
     <LinkedIn fontSize="large" />
     <GitHub fontSize="large" />

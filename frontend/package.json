@@ -17,6 +17,7 @@
     "@mui/styled-engine-sc": "^5.14.8",
     "axios": "^1.5.0",
     "framer-motion": "^10.16.4",
+    "popmotion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.11"

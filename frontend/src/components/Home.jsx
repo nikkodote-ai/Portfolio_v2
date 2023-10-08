@@ -3,6 +3,7 @@ import { ProjectList } from "./ProjectList";
 import { Box, Container, Stack, styled } from "@mui/material";
 import { NavBar } from "./NavBar";
 import { AboutMe } from "./AboutMe";
+import Skills from "./Skills";
 
 
 export const Home = () => {
@@ -21,7 +22,7 @@ export const Home = () => {
 
   return (
 
-    <Container disableGutters spacing={3} sx={{
+    <Container disableGutters sx={{
 p:0,
       m:0, 
       b:0,
@@ -29,8 +30,9 @@ p:0,
       <Stack>
         <NavBar />
               <Header />
-            <Stack direction="column" spacing={3} mt={0}>
+            <Stack direction="column" mt={0}>
               <AboutMe />
+              <Skills/>
               <ProjectList />
         </Stack>
       </Stack>

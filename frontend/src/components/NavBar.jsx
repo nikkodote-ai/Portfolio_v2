@@ -14,7 +14,9 @@ import { useState } from "react";
 
 const StyledTypography = styled(Typography)({
 fontFamily: "Inter",
-fontSize: 17,
+fontSize: 14,
+fontWeight: 100,
+letterSpacing: 6,
 
 });
 
@@ -30,6 +32,7 @@ export const NavBar = () => {
 
   return (
     <>
+    
       <Box
         sx={{
           // position: "fixed",
@@ -62,7 +65,7 @@ export const NavBar = () => {
 
         <Stack alignItems="center"
           alignContent={"center"} mt={1}>
-          <Box sx={{backgroundColor: "#fff", width: "80vw", height: "1.4px"}}>
+          <Box sx={{backgroundColor: "#fff", width: "60vw", height: "1px"}}>
              
             </Box>
           </Stack>

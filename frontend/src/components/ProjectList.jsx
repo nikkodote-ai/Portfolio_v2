@@ -22,12 +22,14 @@ export const ProjectList = () => {
 
   return (
     <>
-    <Stack direction="row" sx={{
+    <Stack direction="row"
+     sx={{
         width:"100vw",
         backgroundColor: "#ffffff",
+        m: 0,
       }}>
       <Stack flex={1}  >
-        <Box pl={17} pt={20} height="100vh" width="50%" component="div" sx={{position: "sticky"}}>
+        <Box pl={17} pt={20} width="50%" component="div" >
         <Typography
         sx={{
           fontSize:"23vh",
@@ -41,8 +43,7 @@ export const ProjectList = () => {
 </Stack>
       <Stack
         component="div"
-        height="100%"
-        sx={{overflow: "auto"}}
+        // sx={{overflowY: "auto", overflowX: "hidden"}}
         alignItems={"center"}
         justifyContent={"center"}
         textAlign={"center"}

@@ -107,14 +107,17 @@ button:focus-visible {
   height: auto;
   max-width: 250px;
   }
-/* 
-@keyframes about-me-animation{
-    0% {opacity: 0; filter: blur(5px); transform: translateX(100%);}
-    100% {opacity: 1; filter: blur(0px); transform: translateX(0);}
+
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee{
+    animation: 20s slide infinite linear;
   }
   
-.about-me{
-   animation-name: about-me-animation;
-   animation-duration: 2s;
-   animation-delay: 1s;
-  } */
