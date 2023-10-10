@@ -64,17 +64,15 @@ export const AboutMe = () => {
         m={0}
         >
         <Stack
-          flex="1"
+          flex="0.7"
           display={{ xs: "block", sm: "flex" }}
           position="relative"
           p={3}
           spacing={3}
           component={motion.div}
-          animate="show"
-          initial="hidden"
-          variants={container}
           >
           <Box
+          className="photo-by-mum"
             sx={{
               backgroundRepeat: "no-repeat",
               zIndex: 1,
@@ -90,7 +88,7 @@ export const AboutMe = () => {
         </Stack>
 
             
-        <Stack flex="1" display="flex" position="relative" mt={-6}>
+        <Stack flex="1" position="relative" mt={-6}>
           <Box ref={ref}>
             {/* <Box
               component={motion.div}
@@ -108,11 +106,10 @@ export const AboutMe = () => {
               }}
             /> */}
           </Box>
-            <Box height="6.5vh" width="100vw" display={{sm: "none", xl:"flex"}}/>
           <Box 
             display={{xs: "none", sm:"grid"}}
             width="45vw"
-            mb={{md: 0, l:0, xl:4}}
+            mb={{md: 0, lg:0, xl:4}}
             component={motion.div}
             variants={container}
             zIndex={2}
@@ -125,6 +122,7 @@ export const AboutMe = () => {
               variant="h1"
               style={{ x: aboutProgress }}
               ml={-8}
+              mt={"4vw"}
             >
               ABOUT
             </AboutMeTypo>
@@ -142,7 +140,7 @@ export const AboutMe = () => {
           </Box>
 
           <Box display={{xs:"flex", sm: "none"}} justifyContent={"center"} textAlign={"center"} whiteSpace={"wrap"}>
-            <Typography fontSize={"60px"} fontFamily={"viaoda libre"} color={"black"}>
+            <Typography fontSize={"60px"} mt={9} fontFamily={"viaoda libre"} color={"black"}>
               ABOUT ME
             </Typography>
           </Box>

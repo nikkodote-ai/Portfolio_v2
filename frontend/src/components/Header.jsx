@@ -145,7 +145,7 @@ export const Header = () => {
           position = "relative"
           zIndex={40}
           inset="0px"
-          top= "-27vh"
+          top= {{xs: "-33vh",md:"-27vh"}}
           component={motion.div}
           style={{ y: contactMeY }}
         >
