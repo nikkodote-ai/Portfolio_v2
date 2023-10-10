@@ -20,6 +20,7 @@
   -webkit-text-size-adjust: 100%;
   --dark-gradient: linear-gradient(90deg, #2f2f2f, #2f2f2f);
   --dark-gradient-reverse: linear-gradient(45deg,#E3D7BD, #EBE6D9, #F6F3E7, #F1F1F1, #F0E2CE, #D3D0C9);
+  --bright-orange: linear-gradient(90deg, #FF5733, #ffa500);
 }
 
 a {
@@ -38,7 +39,7 @@ a:hover {
 
 body {
   /* background-color: "#444444"; */
-  background-image: var(--dark-gradient);
+  /* background-image: var(--dark-gradient); */
   background-size: 300%;
   /* animation: bg-animation 15s infinite alternate; */
   background-attachment: fixed;
@@ -50,8 +51,7 @@ body {
 }
 
 #fade-button{
-  background-image: var(--dark-gradient-reverse);
-  background-size: 300%;
+  background-image: var(--bright-orange);
   animation: bg-animation 25s infinite alternate;
   background-attachment: fixed;
 }

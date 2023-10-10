@@ -17,7 +17,6 @@ export const Header = () => {
   });
 
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  // const midgroundGroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
   const smallTextY = useTransform(scrollYProgress, [0, 1], ["0%", "400%"]);
   const bigTextY = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
   const bigTextX = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
@@ -38,7 +37,7 @@ export const Header = () => {
             xs: 'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/cleaned-background.png")',
           },
           backgroundSize: "cover",
-          height: { xs: "100vh", sm: "110vh" },
+          height: { xs: "100vh", sm: "108.5vh" },
           position: "relative",
           overflow: "hidden",
         }}
@@ -61,7 +60,7 @@ export const Header = () => {
         <StyledTypography
           sx={{
             zIndex: 25,
-            fontSize: "9.6vw",
+            fontSize: "8.4vw",
             position: "relative",
             // left: "-0.5%",
             whiteSpace: "nowrap",
@@ -70,7 +69,7 @@ export const Header = () => {
           component={motion.div}
           style={{ y: bigTextY, x: bigTextX}}
         >
-          SCIENTIST.DEVELOPER
+          SCIENTIST.PROGRAMMER
         </StyledTypography>
 </Box>
 
@@ -125,7 +124,7 @@ export const Header = () => {
         <StyledTypography
           sx={{
             zIndex: 25,
-            fontSize: "18vw",
+            fontSize: "14vw",
             position: "relative",
             // left: "-0.5%",
             whiteSpace: "nowrap",
@@ -135,7 +134,7 @@ export const Header = () => {
           component={motion.div}
           style={{ y: bigTextY, x: bigTextX}}
         >
-          DEVELOPER
+          PROGRAMMER
         </StyledTypography>
 </Box>
 

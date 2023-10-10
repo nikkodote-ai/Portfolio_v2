@@ -1,22 +1,20 @@
 import { Box, Button, Stack, Typography, styled } from "@mui/material";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import {degreesToRadians} from "popmotion";
-export const AboutMe = () => {
 
+export const AboutMe = () => {
   // scroll animation
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "15 1"] 
+    offset: ["0 1", "15 1"],
   });
 
-  
   const rotationProgressSmall = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotationProgressBig = useTransform(scrollYProgress, [0, 1], [0, -500]);
   const aboutProgress = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const XSaboutProgress = useTransform(scrollYProgress, [0, 1], [0, 60]);
   const meProgress = useTransform(scrollYProgress, [0, 1], [0, -120]);
-
 
   const container = {
     hidden: { opacity: 0 },
@@ -36,29 +34,38 @@ export const AboutMe = () => {
 
   const AboutMeTypo = styled(Typography)({
     fontFamily: "viaoda libre",
-    color: "white",
+    color: "#007c7d",
     zIndex: 2,
   });
 
-  
+  const AboutMeContent = `I'm a dedicated medical scientist, software developer, and machine
+  learning engineer passionate about revolutionizing healthcare
+  through technology. I bridge medicine and technology to create
+  innovative, patient-centered solutions. My mission is to make
+  healthcare more accessible and efficient through data-driven
+  insights and cutting-edge tech. I'm an advocate for
+  interdisciplinary collaboration and lifelong learning in
+  healthcare innovation.`;
 
   return (
     <>
       <Stack
-        direction={{xs:"column", sm: "row"}}
+        direction={{ xs: "column", sm: "row" }}
         display={"flex"}
+        overflow={"hidden"}
         sx={{
           textAlign: { xs: "center", sm: "left" },
           justifyContent: { xs: "center", sm: "left" },
           alignContent: { xs: "center", sm: "left" },
-          height: {sm: "100vh",}
+          height: { sm: "100vh" },
+          backgroundColor: "#ffffff",
         }}
-        overflow={"hidden"}
         width="100vw"
-      >
+        m={0}
+        >
         <Stack
           flex="1"
-          display="flex"
+          display={{ xs: "block", sm: "flex" }}
           position="relative"
           p={3}
           spacing={3}
@@ -66,36 +73,58 @@ export const AboutMe = () => {
           animate="show"
           initial="hidden"
           variants={container}
-        >
+          >
           <Box
             sx={{
               backgroundRepeat: "no-repeat",
               zIndex: 1,
               position: "relative",
-              display: {xs:"flex", sm:"grid"},
-              left: {xs: "0", sm:"3vw"},
+              display: { xs: "none", sm: "grid" },
+              left: { xs: "0", sm: "3vw" },
               height: "90%",
               backgroundSize: "contain",
               backgroundImage:
-                'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/PHOTO+BY+MY+MUM.png")',
+              'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/PHOTO+BY+MY+MUM.png")',
             }}
-          />
-          <Box
-            position= "absolute"
-            display="grid"
-            top="50vh"
-            left="-0.9vw"
+            />
+        </Stack>
+
+            
+        <Stack flex="1" display="flex" position="relative" mt={-6}>
+          <Box ref={ref}>
+            {/* <Box
+              component={motion.div}
+              
+              style={{
+                rotate: rotationProgressSmall,
+                x: rotationProgressSmall,
+              }}
+              sx={{
+                height: "2vw",
+                backgroundImage:
+                  'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/aus-star.svg")',
+                backgroundSize: "cover",
+                color: "black",
+              }}
+            /> */}
+          </Box>
+            <Box height="6.5vh" width="100vw" display={{sm: "none", xl:"flex"}}/>
+          <Box 
+            display={{xs: "none", sm:"grid"}}
             width="45vw"
+            mb={{md: 0, l:0, xl:4}}
             component={motion.div}
             variants={container}
             zIndex={2}
+
           >
             <AboutMeTypo
-              fontSize="20vh"
+              fontSize={{xs:"12vh", sm:"20vh"}}
               component={motion.div}
               // variants={item}
               variant="h1"
-              style={{x: aboutProgress}}
+              style={{ x: aboutProgress }}
+              ml={-8}
             >
               ABOUT
             </AboutMeTypo>
@@ -105,65 +134,64 @@ export const AboutMe = () => {
               component={motion.div}
               // variants={item}
               variant="h1"
-              style={{x: meProgress}}
-ml={9}            >
+              style={{ x: meProgress }}
+              ml={35}
+            >
               ME
             </AboutMeTypo>
           </Box>
-        </Stack>
 
-        <Stack flex="1" display="flex" position="relative">
-          <Box ref={ref}>
+          <Box display={{xs:"flex", sm: "none"}} justifyContent={"center"} textAlign={"center"} whiteSpace={"wrap"}>
+            <Typography fontSize={"60px"} fontFamily={"viaoda libre"} color={"black"}>
+              ABOUT ME
+            </Typography>
+          </Box>
 
-          <Box
-            component={motion.div}
-            style={{
-              rotate: rotationProgressSmall,
-              x: rotationProgressSmall,
-            }}
-            sx={{
-              height: "5vw",
-              width: "5vw",
-              backgroundImage: 'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/aus-star.svg")',
-              backgroundSize: "cover",
-            }}
-            mt={15}
-            mb={4}
-            />
-            </Box>
-          <Box width="70%" >
+          <Box width={{ xs: "100%", sm: "70%" }} m={{xs: 0, sm: 4}}>
             <Typography
-              sx={{ fontFamily: "Inter", color: "white", fontSize: "18px", lineHeight: 2.5 }}
+              sx={{
+                fontFamily: "Inter",
+                textAlign: "justify",
+                color: "#005254",
+                fontSize: { xs: "14px", sm: "18px" },
+                lineHeight: { xs: 1.7, sm: 2.2 },
+              }}
               component={motion.div}
               variants={item}
               variant="body1"
+              p={{xs:4, sm:0}}
             >
-              I'm a dedicated medical scientist, software developer, and machine
-              learning engineer passionate about revolutionizing healthcare
-              through technology. I bridge medicine and technology to create
-              innovative, patient-centered solutions. My mission is to make
-              healthcare more accessible and efficient through data-driven
-              insights and cutting-edge tech. I'm an advocate for
-              interdisciplinary collaboration and lifelong learning in
-              healthcare innovation.
+              {AboutMeContent}
             </Typography>
-            <Box mt={3}>
+            <Box mt={4}>
               <Button
+                disableElevation
                 component={motion.div}
                 variants={item}
                 variant={"contained"}
                 sx={{
+                  fontSize: { xs: "25px", sm: "25px" },
                   width: "100%",
-                  backgroundColor: "white",
-                  color: "#222222",
+                  fontFamily: "Inter",
+                  letterSpacing: 5,
+                  fontWeight: 600,
+                  backgroundColor: "#ff7f50",
+                  color: "#fff",
                   borderRadius: 0,
+                  "&:hover": {
+                    backgroundColor: "#333",
+                    color: "#fff",
+                  },
                 }}
               >
                 Resume
               </Button>
             </Box>
+            <Box disableGutters m={-1} display={{xs:"flex",sm:"none"}}>
+              <img src="https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/PHOTO+BY+MY+MUM.png" width="100%"/>
+            </Box>
           </Box>
-
+{/* 
           <Box
             component={motion.div}
             position="absolute"
@@ -174,15 +202,16 @@ ml={9}            >
             }}
             sx={{
               height: "5vw",
-width: "5vw",
-              backgroundImage: 'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/aus-star.svg")',
+              width: "5vw",
+              backgroundImage:
+                'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/aus-star.svg")',
               backgroundSize: "cover",
             }}
             mt={15}
             right={"10%"}
             bottom={"10%"}
             mb={4}
-            />
+          /> */}
         </Stack>
       </Stack>
     </>

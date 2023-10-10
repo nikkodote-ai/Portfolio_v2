@@ -26,8 +26,9 @@ export const Home = () => {
 p:0,
       m:0, 
       b:0,
+      
     }}>
-      <Stack>
+      <Stack width="100vw" overflow="hidden">
         <NavBar />
               <Header />
             <Stack direction="column" mt={0}>

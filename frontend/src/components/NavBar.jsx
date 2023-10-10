@@ -76,9 +76,10 @@ export const NavBar = () => {
         justifyContent={"right"}
         sx={{ display: { xs: "flex", md: "none" },
         position: "fixed",
-      top: 12,
-    right: 12, }}
-      >
+        bottom: 90,
+    right: 40,
+    zIndex: 50, }}
+    >
         <Button
           id="fade-button"
           disableElevation
@@ -88,11 +89,15 @@ export const NavBar = () => {
           onClick={handleClick}
           variant="contained"
           sx={{
-            color: "#222222",
+            boxShadow: 3,
+            borderRadius: 100,
+            height: "65px",
+            width: "65px",
+            color: "#fff",
             "&:hover": {color: "#fff" },
           }}
         >
-          <MenuIcon />
+          <MenuIcon sx={{fontSize: '2rem'}}/>
         </Button>
         <Menu
           id="fade-menu"
