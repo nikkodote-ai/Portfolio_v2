@@ -12,9 +12,9 @@ export const AboutMe = () => {
 
   const rotationProgressSmall = useTransform(scrollYProgress, [0, 1], [0, 360]);
   const rotationProgressBig = useTransform(scrollYProgress, [0, 1], [0, -500]);
-  const aboutProgress = useTransform(scrollYProgress, [0, 1], [0, 120]);
+  const aboutProgress = useTransform(scrollYProgress, [0, 1], [0, 1000]);
   const XSaboutProgress = useTransform(scrollYProgress, [0, 1], [0, 60]);
-  const meProgress = useTransform(scrollYProgress, [0, 1], [0, -120]);
+  const meProgress = useTransform(scrollYProgress, [0, 1], [0, -500]);
 
   const container = {
     hidden: { opacity: 0 },
@@ -105,7 +105,6 @@ export const AboutMe = () => {
                 color: "black",
               }}
             /> */}
-          </Box>
           <Box 
             display={{xs: "none", sm:"grid"}}
             width="45vw"
@@ -138,9 +137,10 @@ export const AboutMe = () => {
               ME
             </AboutMeTypo>
           </Box>
+            </Box>
 
           <Box display={{xs:"flex", sm: "none"}} justifyContent={"center"} textAlign={"center"} whiteSpace={"wrap"}>
-            <Typography fontSize={"60px"} mt={9} fontFamily={"viaoda libre"} color={"black"}>
+            <Typography fontSize={"60px"} mt={9} fontFamily={"viaoda libre"} color={"#007c7d"}>
               ABOUT ME
             </Typography>
           </Box>
