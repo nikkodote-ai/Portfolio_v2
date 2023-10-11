@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 CORS_ORIGIN_ALLOW_ALL = True # corsheaders
 
@@ -23,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0=rzn@g8uxf2=&u1l72k61m&k#c0)8lwmtc78c=fa9k+9+qat3'
+SECRET_KEY = os.env.get("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.27.183.63:8000', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = os.env.get("SERVERNAMES").split()
 
 
 # Application definition
