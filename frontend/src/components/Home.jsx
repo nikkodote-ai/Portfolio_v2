@@ -3,7 +3,7 @@ import { ProjectList } from "./ProjectList";
 import { Box, Container, Stack, styled } from "@mui/material";
 import { NavBar } from "./NavBar";
 import { AboutMe } from "./AboutMe";
-import {Skills} from "./Skills";
+// import {Skills} from "./Skills";
 
 
 export const Home = () => {
@@ -33,7 +33,7 @@ p:0,
               <Header />
             <Stack direction="column" mt={0}>
               <AboutMe />
-              <Skills/>
+              {/* <Skills/> */}
               <ProjectList />
         </Stack>
       </Stack>
