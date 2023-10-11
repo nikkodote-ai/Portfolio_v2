@@ -29,12 +29,12 @@ p:0,
       
     }}>
       <Stack width="100vw" overflow="hidden">
-        <NavBar />
+        {/* <NavBar /> */}
               <Header />
             <Stack direction="column" mt={0}>
               <AboutMe />
               <Skills/>
-              <ProjectList />
+              {/* <ProjectList /> */}
         </Stack>
       </Stack>
     </Container>
