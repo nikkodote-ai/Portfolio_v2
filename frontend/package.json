@@ -9,7 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "engines":{
+  "engines": {
     "react": "9.6.7"
   },
   "dependencies": {
@@ -23,6 +23,7 @@
     "popmotion": "^11.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-spinners": "^0.13.8",
     "styled-components": "^5.3.11"
   },
   "devDependencies": {
