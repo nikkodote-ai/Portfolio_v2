@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Inter:wght@200;300;400;900&family=Prata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Viaoda+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Libre+Baskerville:wght@700&family=Viaoda+Libre&display=swap');
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -110,14 +110,17 @@ button:focus-visible {
 
   @keyframes slide {
     from {
-      transform: translateX(0);
+      transform: translateX(-0%);
     }
     to {
-      transform: translateX(-50%);
+      transform: translateX(-100%);
     }
   }
 
   .marquee{
-    animation: 20s slide infinite linear;
+    animation: 30s slide infinite linear;
+    
   }
+
+  a, a:hover, a:active, a:visited { color: white; }
   

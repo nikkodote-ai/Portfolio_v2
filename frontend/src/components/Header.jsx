@@ -33,10 +33,7 @@ export const Header = () => {
         display={"grid"}
         sx={{
           top: {xs:"0", sm: "-8.5vh"},
-          backgroundImage: {
-            xs: 'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/cleaned-background.png")',
-          },
-          backgroundSize: "cover",
+          backgroundColor: "#FFFFFF",
           height: { xs: "100vh", sm: "108.5vh" },
           position: "relative",
           overflow: "hidden",
@@ -105,14 +102,15 @@ export const Header = () => {
         <Typography
           sx={{
             zIndex: 25,
-            fontSize: "26vw",
+            fontSize: "22vw",
             position: "relative",
             // left: "-0.5%",
             whiteSpace: "nowrap",
             contain: "paint",  
             lineHeight: "1em",
             color: "white",
-            fontFamily: "Via",
+            fontFamily: "libre baskerville",
+            fontWeight: "bold",
             m:-4
 
           }}
@@ -164,6 +162,7 @@ export const Header = () => {
           sx={{
             backgroundImage: {
               xs: 'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/corrected_background.png")',
+            
             },
             position: "absolute",
             backgroundSize: "cover",
@@ -193,7 +192,7 @@ export const Header = () => {
           sx={{
             backgroundImage: {
               xs: 'url("https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/corrected_foreground.png")',
-            },
+           },
             position: "absolute",
             backgroundSize: "cover",
             backgroundPosition: "bottom",
