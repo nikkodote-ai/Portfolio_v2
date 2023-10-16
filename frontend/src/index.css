@@ -124,3 +124,4 @@ button:focus-visible {
 
   a, a:hover, a:active, a:visited { color: white; }
   
+  a.menu, a.menu:hover, a.menu:active, a.menu:visited { color:black; }

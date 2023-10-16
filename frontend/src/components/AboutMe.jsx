@@ -57,7 +57,7 @@ export const AboutMe = () => {
           textAlign: { xs: "center", sm: "left" },
           justifyContent: { xs: "center", sm: "left" },
           alignContent: { xs: "center", sm: "left" },
-          height: { sm: "100vh" },
+          height: { xs: "100vh" },
           backgroundColor: "#ffffff",
         }}
         width="100vw"

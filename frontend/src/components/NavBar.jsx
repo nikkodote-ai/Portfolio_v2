@@ -10,14 +10,13 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
-
+import {Link}  from "react-router-dom";
 
 const StyledTypography = styled(Typography)({
-fontFamily: "Inter",
-fontSize: 14,
-fontWeight: 100,
-letterSpacing: 6,
-
+  fontFamily: "Inter",
+  fontSize: 14,
+  fontWeight: 100,
+  letterSpacing: 6,
 });
 
 export const NavBar = () => {
@@ -32,7 +31,6 @@ export const NavBar = () => {
 
   return (
     <>
-    
       <Box
         sx={{
           // position: "fixed",
@@ -45,41 +43,52 @@ export const NavBar = () => {
           zIndex: 1,
         }}
       >
-        <Stack direction="column" alignItems="center"
-          alignContent={"center"}>
-           
-        <Stack
-          direction="row"
-          spacing={15}
-          alignItems="center"
-          alignContent={"center"}
-          pt={1}
-          height={50}
-          color={"white"}
+        <Stack direction="column" alignItems="center" alignContent={"center"}>
+          <Stack
+            direction="row"
+            spacing={15}
+            alignItems="center"
+            alignContent={"center"}
+            pt={1}
+            height={50}
+            color={"white"}
           >
-          <StyledTypography>WORKS</StyledTypography>
-          <StyledTypography>INTERESTS</StyledTypography>
-          <StyledTypography>THOUGHTS</StyledTypography>
-          <StyledTypography>CONTACT</StyledTypography>
-        </Stack>
+            <Link to="/">
+              <StyledTypography>HOME</StyledTypography>
+            </Link>
+            <Link to="/works">
+              <StyledTypography>WORKS</StyledTypography>
+            </Link>
 
-        <Stack alignItems="center"
-          alignContent={"center"} mt={1}>
-          <Box sx={{backgroundColor: "#fff", width: "60vw", height: "1px"}}>
-             
-            </Box>
+            <Link to="/interests">
+              <StyledTypography>INTERESTS</StyledTypography>
+            </Link>
+            <Link to="/thoughts">
+              <StyledTypography>THOUGHTS</StyledTypography>
+            </Link>
+            <Link to="/contact">
+              <StyledTypography>CONTACT</StyledTypography>
+            </Link>
           </Stack>
+
+          <Stack alignItems="center" alignContent={"center"} mt={1}>
+            <Box
+              sx={{ backgroundColor: "#fff", width: "60vw", height: "1px" }}
+            ></Box>
           </Stack>
+        </Stack>
       </Box>
 
       <Box
         justifyContent={"right"}
-        sx={{ display: { xs: "flex", md: "none" },
-        position: "fixed",
-        bottom: 90,
-    right: 40,
-    zIndex: 50, }}
-    >
+        sx={{
+          display: { xs: "flex", md: "none" },
+          position: "fixed",
+          bottom: 90,
+          right: 40,
+          zIndex: 50,
+        }}
+      >
         <Button
           id="fade-button"
           disableElevation
@@ -94,10 +103,10 @@ export const NavBar = () => {
             height: "65px",
             width: "65px",
             color: "#fff",
-            "&:hover": {color: "#fff" },
+            "&:hover": { color: "#fff" },
           }}
         >
-          <MenuIcon sx={{fontSize: '2rem'}}/>
+          <MenuIcon sx={{ fontSize: "2rem" }} />
         </Button>
         <Menu
           id="fade-menu"
@@ -112,10 +121,25 @@ export const NavBar = () => {
             fill: "#000000",
           }}
         >
-          <MenuItem onClick={handleClose}>Work</MenuItem>
-          <MenuItem onClick={handleClose}>Interest</MenuItem>
-          <MenuItem onClick={handleClose}>Thoughts</MenuItem>
-          <MenuItem onClick={handleClose}>Contact</MenuItem>
+          <Link to="/" className="menu" >
+          <MenuItem onClick={handleClose}>Home</MenuItem>
+          </Link>
+
+          <Link to="/works" className="menu">
+          <MenuItem  onClick={handleClose}>Works</MenuItem>
+          </Link>
+
+          <Link to="/interests" className="menu">
+          <MenuItem  onClick={handleClose}>Interests</MenuItem>
+          </Link>
+
+          <Link to="/thoughts" className="menu">
+          <MenuItem  onClick={handleClose}>Thoughts</MenuItem>
+          </Link>
+
+          <Link to="/contact" className="menu">
+          <MenuItem className="menu" onClick={handleClose}>Contact</MenuItem>
+          </Link>
         </Menu>
       </Box>
     </>

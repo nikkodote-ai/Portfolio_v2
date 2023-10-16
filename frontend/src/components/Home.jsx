@@ -15,21 +15,21 @@ export const Home = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 4000);
   } 
   , []);
 
-  const backgroundBox = styled(Box)({
-    height:"100vh",
-    alignItems:"center",
-      backgroundImage:{
-        xs: 'linear-gradient(45deg, rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1695642579133-d41f36bcca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80")',
-        sm: 'none'
-      },
-      backgroundSize:"cover",
-      animation: 'bg-animation 100s infinite alternate',
+  // const backgroundBox = styled(Box)({
+  //   height:"100vh",
+  //   alignItems:"center",
+  //     backgroundImage:{
+  //       xs: 'linear-gradient(45deg, rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1695642579133-d41f36bcca61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1976&q=80")',
+  //       sm: 'none'
+  //     },
+  //     backgroundSize:"cover",
+  //     animation: 'bg-animation 100s infinite alternate',
      
-  })
+  // })
 
   return (
 
@@ -56,11 +56,11 @@ p:0,
           <Box width="70vw" zIndex={1} container spacing={3}>
           
         <Typography mb={2.5} lineHeight={0.9} sx={{color:"#ff8652", fontFamily:"inter", fontSize:"4.5rem", fontWeight:"bold"}}>
-          Hey! I'm Nikko</Typography>
+          Hey! I'm Nikko!</Typography>
 
 
           <Typography mb={2.5} lineHeight={0.9} sx={{color:"#62d0ff", fontFamily:"inter", fontSize:"3rem", fontWeight:"bold"}}>
-          and welcome to my playground.</Typography>
+          welcome to my playground.</Typography>
 
           {/* <Typography lineHeight={0.9} fontStyle="italic" sx={{color:"#ff8652", fontFamily:"viaoda libre", fontSize:"2rem", fontWeight:"bold"}}>
           have a look and enjoy!
@@ -73,7 +73,7 @@ p:0,
           <PuffLoader
   color="#ff8652"
   loading={loading}
-  size={50}
+  size={100}
   aria-label="Loading Spinner"
   data-testid="loader"
   />
@@ -98,7 +98,7 @@ p:0,
     :
 
     (<Stack width="100vw" overflow="hidden">
-        {/* <NavBar /> */}
+        <NavBar />
               <Header />
             <Stack direction="column" mt={0}>
               <AboutMe />
