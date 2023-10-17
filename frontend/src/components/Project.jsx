@@ -66,6 +66,8 @@ export const Project = (props) => {
 
   return (
     <>
+    <a href={props.url}>
+
       <StyledBox>
         <StyledPaper
           square
@@ -74,7 +76,7 @@ export const Project = (props) => {
             backgroundImage: `linear-gradient(45deg, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.7)), url(${props.image})`,
             height: "100%",
           }}
-        >
+          >
           <Stack
             direction="column"
             width="inherit"
@@ -100,6 +102,7 @@ export const Project = (props) => {
           </Stack>
         </StyledPaper>
       </StyledBox>
+              </a>
     </>
   );
 };

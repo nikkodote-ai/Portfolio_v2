@@ -103,7 +103,7 @@ p:0,
             <Stack direction="column" mt={0}>
               <AboutMe />
               <Skills/>
-              {/* <ProjectList /> */}
+              <ProjectList />
         </Stack>
       </Stack>)
     
