@@ -36,7 +36,7 @@ export const ProjectList = () => {
   useEffect(() => {
     let data;
     axios
-      .get("http://54.206.56.53:8000/")
+      .get("https://54.206.56.53:8000/")
       // .get("http://localhost:8000/")
       .then((res) => {
         data = res.data;
