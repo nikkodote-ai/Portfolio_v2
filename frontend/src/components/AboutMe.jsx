@@ -162,6 +162,8 @@ export const AboutMe = () => {
               {AboutMeContent}
             </Typography>
             <Box mt={4}>
+              <a href="https://www.dropbox.com/scl/fi/nlencv1v2iu9yt9m4dd3v/Nikko_Dote-Resume-MS_SD_part_1.pdf?rlkey=asmrvxunea27uq2sf5ctm6r8t&dl=0&raw=1">
+
               <Button
                 disableElevation
                 component={motion.div}
@@ -184,6 +186,7 @@ export const AboutMe = () => {
               >
                 Resume
               </Button>
+                  </a>
             </Box>
             <Box disableGutters m={-1} display={{xs:"flex",sm:"none"}}>
               <img src="https://portfolio-v2-django-react-mui.s3.ap-southeast-2.amazonaws.com/images/PHOTO+BY+MY+MUM.png" width="100%"/>

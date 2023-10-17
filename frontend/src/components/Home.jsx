@@ -15,7 +15,7 @@ export const Home = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 4000);
+    }, 5000);
   } 
   , []);
 
@@ -62,9 +62,9 @@ p:0,
           <Typography mb={2.5} lineHeight={0.9} sx={{color:"#62d0ff", fontFamily:"inter", fontSize:"3rem", fontWeight:"bold"}}>
           welcome to my playground.</Typography>
 
-          {/* <Typography lineHeight={0.9} fontStyle="italic" sx={{color:"#ff8652", fontFamily:"viaoda libre", fontSize:"2rem", fontWeight:"bold"}}>
+          <Typography lineHeight={0.9} fontStyle="italic" sx={{color:"#ff8652", fontFamily:"viaoda libre", fontSize:"2rem", fontWeight:"bold"}}>
           have a look and enjoy!
-          </Typography> */}
+          </Typography>
 
           <Box m={3} display="flex" textAlign={"center"} justifyItems={"center"} alignContent={'center'} justifyContent={"center"}>
 
