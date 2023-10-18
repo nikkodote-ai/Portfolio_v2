@@ -22,7 +22,7 @@ class App extends React.Component {
           <Route exact path="/interests" element={<Interests />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/thoughts" element={<Thoughts />} />
-          <Route exact path="/works/apps/stroke-prediction" element={<StrokePrediction />} />
+          <Route exact path="/works/apps/stroke_prediction" element={<StrokePrediction />} />
         </Routes>
       </>
     );
