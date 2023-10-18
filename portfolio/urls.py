@@ -19,9 +19,13 @@ from django.urls import path, include
 # from django.conf.urls import url
 from api.views import *
 from apps.stroke_prediction.views import *
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ProjectView.as_view(), name='project_view'),
     path('apps/stroke_prediction/', StrokeView.as_view(), name='stroke_view'),
 ]
+
+
+urlpatterns += staticfiles_urlpatterns()
