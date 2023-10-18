@@ -36,7 +36,7 @@ export const ProjectList = () => {
   useEffect(() => {
     let data;
     axios
-      .get("https://54.206.56.53:8000/")
+      .get(process.env.REACT_APP_API_URL)
       // .get("http://localhost:8000/")
       .then((res) => {
         data = res.data;
