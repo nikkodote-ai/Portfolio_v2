@@ -35,8 +35,9 @@ export const ProjectList = () => {
 
   useEffect(() => {
     let data;
+    console.log(process.env.REACT_APP_API_URL);
     axios
-      .get(process.env.REACT_APP_API_URL)
+      .get("https://portfolio-v2-backend-shbn.onrender.com")
       // .get("http://localhost:8000/")
       .then((res) => {
         data = res.data;
