@@ -28,7 +28,9 @@ const SMProjectsTypo = styled(Typography)({
 export const ProjectList = () => {
   // make project
   let [details, setDetails] = useState([{}]);
-  console.log(process.env.REACT_APP_MODE);
+  console.log(import.meta.env.REACT_APP_MODE);
+  console.log(import.meta.env.MODE);
+  console.log(import.meta.env.REACT_APP_API_URL);
   useEffect(() => {
     let data;
     let api_url = "";
