@@ -32,7 +32,7 @@ export const ProjectList = () => {
   useEffect(() => {
     let data;
     let api_url = "";
-    if (import.meta.env.NODE_ENV==="production"){
+    if (import.meta.env.REACT_APP_MODE==="production"){
       api_url = import.meta.env.REACT_APP_API_URL}
       else {api_url="http://localhost:8000/"}
       axios
