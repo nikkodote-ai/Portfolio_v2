@@ -7,8 +7,13 @@ import numpy as np
 import pickle
 from django.http import JsonResponse
 import pandas as pd
+import os
 
-model = pickle.load(open('C:/Users/nikko/OneDrive/Desktop/Professional_Portfolio/portfolio/apps/stroke_prediction/model_stroke.pkl', 'rb'))
+model = None
+if os.environ['PRODUCTION'] == "True":
+    model = "model_stroke.pkl"
+else:
+    model = pickle.load(open('C:/Users/nikko/OneDrive/Desktop/Professional_Portfolio/portfolio/apps/stroke_prediction/model_stroke.pkl', 'rb'))
 print('Model loaded')
 class StrokeView(APIView):
     serializer_class = StrokeSerializer
