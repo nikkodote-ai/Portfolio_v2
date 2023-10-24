@@ -48,7 +48,7 @@ export const StrokePrediction = () => {
                 md:"4rem"
             }}}>Stroke Prediction</Title>
             <Line/>
-            <Box width={{xs: "90%", md:"50%"}}>
+            <Box width={{xs: "90%", md:"60%"}} pb={4}>
 
             <Box mb={2}>
 

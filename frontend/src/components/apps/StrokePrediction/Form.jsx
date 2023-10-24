@@ -66,8 +66,8 @@ export const Form = () => {
         // .catch((error) => console.log("Authorization failed: " + error.message))
     );
 
-    console.log(values);
-    console.log(result);
+    // console.log(values);
+    // console.log(result);
   };
 
   return (
