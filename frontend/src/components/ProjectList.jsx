@@ -28,12 +28,15 @@ const SMProjectsTypo = styled(Typography)({
 export const ProjectList = () => {
   // make project
   let [details, setDetails] = useState([{}]);
-
+  console.log(process.env.REACT_APP_MODE);
   useEffect(() => {
     let data;
     let api_url = "";
     if (import.meta.env.REACT_APP_MODE==="production"){
-      api_url = import.meta.env.REACT_APP_API_URL}
+      api_url = import.meta.env.REACT_APP_API_URL;
+      console.log('production mode')
+      console.log(import.meta.env.REACT_APP_API_URL)
+  }
       else {api_url="http://localhost:8000/"}
       axios
       .get(api_url)
