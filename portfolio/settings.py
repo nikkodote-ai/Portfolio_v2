@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
-CORS_ORIGIN_ALLOW_ALL = True # corsheaders
+CORS_ORIGIN_ALLOW_ALL = True  # corsheaders
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -29,8 +29,6 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -51,7 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware', # corsheaders
+    'corsheaders.middleware.CorsMiddleware',  # corsheaders
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -60,7 +58,8 @@ MIDDLEWARE = [
 
 ]
 
-REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.AllowAny',),}
+REST_FRAMEWORK = {'DEFAULT_PERMISSION_CLASSES': (
+    'rest_framework.permissions.AllowAny',), }
 
 ROOT_URLCONF = 'portfolio.urls'
 
@@ -87,9 +86,13 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 if os.environ['PRODUCTION'] == "True":
-    DATABASES={
+    DATABASES = {
         "default": dj_database_url.config(default=os.environ["DATABASE_URL"])
     }
+
+    ALLOWED_HOSTS = ["www.nikkodote.com"]
+
+
 else:
     DATABASES = {
         'default': {
@@ -98,6 +101,7 @@ else:
         }
     }
 
+    ALLOWED_HOSTS = ["*"]
 
 
 # Password validation
