@@ -48,7 +48,7 @@ export const StrokePrediction = () => {
                 md:"4rem"
             }}}>Stroke Prediction</Title>
             <Line/>
-            <Box width={{xs: "90%", md:"60%"}} pb={4}>
+            <Box width={{xs: "90%", md:"60%"}}>
 
             <Box mb={2}>
 
@@ -65,7 +65,7 @@ export const StrokePrediction = () => {
             </Box>
             <Stack spacing={3} width="60vw" direction={{xs:"column", sm:"row"}} justifyContent={"center"} alignItems={"center"} textAlign={"center"} >
         
-        <Box flex={1}  justifyContent={"center"} textAlign={'center'} alignItems={'center'} display={"flex"}>
+        <Box flex={1}  justifyContent={"center"} textAlign={'center'} alignItems={'center'} display={"flex"}  pb={4}>
 
         <Form />
         </Box>
