@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavBar } from '../../NavBar'
 import { Box, Stack, Typography, styled} from '@mui/material'
 import { Form } from './Form'
@@ -30,13 +29,16 @@ export const StrokePrediction = () => {
     const IntroductionText=`
     Introduction:
     Welcome to our Stroke Prediction Machine Learning App! This app estimates stroke risk based on your health and lifestyle data.
+    The current machine learning classifier used is LightGBM. The data is preprocessed using pandas and imblearn SMOTE was used to overcome the class
+    imbalance. The model was trained on the Kaggle Stroke Prediction Dataset. The model has moderate accuracy but will be improved in the future. (last updated: 24/10/2023)
     `
     const DisclaimerText = `
     Disclaimer:
     This app is for educational use only and not a substitute for professional medical advice. Consult a healthcare expert for personalized guidance.`
 
+  
   return (
-    <Box disableGutters sx={{ backgroundColor: "#326164",  height:"100%", width:"100vw"}}>
+    <Box disableGutters p={2} sx={{ backgroundColor: "#326164",  height:"100vh", width:"100vw"}} >
         <NavBar />
 
         <Box p={3} >

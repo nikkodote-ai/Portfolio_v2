@@ -56,7 +56,7 @@ export const NavBar = () => {
             <Link to="/">
               <StyledTypography>HOME</StyledTypography>
             </Link>
-            <Link to="/works">
+            {/* <Link to="/works">
               <StyledTypography>WORKS</StyledTypography>
             </Link>
 
@@ -65,7 +65,7 @@ export const NavBar = () => {
             </Link>
             <Link to="/thoughts">
               <StyledTypography>THOUGHTS</StyledTypography>
-            </Link>
+            </Link> */}
             <Link to="/contact">
               <StyledTypography>CONTACT</StyledTypography>
             </Link>
@@ -125,7 +125,7 @@ export const NavBar = () => {
           <MenuItem onClick={handleClose}>Home</MenuItem>
           </Link>
 
-          <Link to="/works" className="menu">
+          {/* <Link to="/works" className="menu">
           <MenuItem  onClick={handleClose}>Works</MenuItem>
           </Link>
 
@@ -135,7 +135,7 @@ export const NavBar = () => {
 
           <Link to="/thoughts" className="menu">
           <MenuItem  onClick={handleClose}>Thoughts</MenuItem>
-          </Link>
+          </Link> */}
 
           <Link to="/contact" className="menu">
           <MenuItem className="menu" onClick={handleClose}>Contact</MenuItem>

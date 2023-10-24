@@ -24,7 +24,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', ProjectView.as_view(), name='project_view'),
-    path('apps/stroke_prediction/', StrokeView.as_view(), name='stroke_view'),
+    path('api/apps/stroke_prediction/', StrokeView.as_view(), name='stroke_view'),
 ]
 
 

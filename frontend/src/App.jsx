@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import { Home } from "./components/Home";
 import { Works } from "./components/Works";

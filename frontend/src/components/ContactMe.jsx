@@ -1,6 +1,6 @@
 import { GitHub, Email, Instagram, LinkedIn} from '@mui/icons-material'
-import { Box, Button, Link, Stack} from '@mui/material';
-import {motion} from 'framer-motion';
+import { Box, Stack} from '@mui/material';
+// import {motion} from 'framer-motion';
 
 export const ContactMe = () => {
   return (
@@ -9,7 +9,7 @@ export const ContactMe = () => {
     <Box  textAlign={"center"} style={{color: 'white'}} m={0} display="grid">
     {/* <Typography>Contact Me! <KeyboardDoubleArrowDown/> </Typography> */}
         <Stack direction="row" justifyContent={"center"} alignContent={"center"}  spacing={8}>
-          <a className="contact-icons" href={`mailto:nikko.dote@gmail.com`} rel="noopener noreferrer">
+          <a className="contact-icons" href={`mailto:nikkodote.ai@gmail.com`} rel="noopener noreferrer">
 
    <Email  fontSize='large'/>
           </a>

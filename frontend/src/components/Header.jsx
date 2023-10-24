@@ -1,4 +1,4 @@
-import { Box, Button, Stack, Typography, styled } from "@mui/material";
+import { Box, Stack, Typography, styled } from "@mui/material";
 import { ContactMe } from "./ContactMe";
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -37,6 +37,7 @@ export const Header = () => {
           height: { xs: "100vh", sm: "108.5vh" },
           position: "relative",
           overflow: "hidden",
+          zIndex:0,
         }}
         width="100vw"
       >
