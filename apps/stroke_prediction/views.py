@@ -3,15 +3,20 @@ from rest_framework.views import APIView
 from .serializers import StrokeSerializer
 from .models import Observation
 from rest_framework.response import Response
-import numpy as np
-import pickle
-from django.http import JsonResponse
+
 import pandas as pd
+import numpy as np
+# load pickle locally and remotely
+from urllib.request import urlopen
+from sklearn.externals import joblib
+# turn model prediction to proper JSON HTTP response
+from django.http import JsonResponse
+# read environmental variables
 import os
 
 model = None
 if os.environ['PRODUCTION'] == "True":
-    model = pickle.load(open(os.environ['MODEL_URL']))
+    model = joblib.load(urlopen(os.environ['MODEL_URL']))
     print("Remote Model Successfully Loaded")
 else:
     model = pickle.load(open('../model_stroke.pkl', 'rb'))

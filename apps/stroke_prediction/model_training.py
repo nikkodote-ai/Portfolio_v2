@@ -1,4 +1,4 @@
-import pickle
+import joblib
 import os
 import pandas as pd
 from imblearn.over_sampling import SMOTE
@@ -58,7 +58,7 @@ def predict(form_answers: list):
 
 def make_pkl():
     # pickle.dump(clf, open('works/apps/stroke_prediction/model_stroke.pkl', 'wb'))
-    pickle.dump(clf, open('model_stroke.pkl', 'wb'))
+    joblib.dump(clf, 'model_stroke.pkl')
 
 X_train_oversampled, X_test, y_train_oversampled, y_test= preprocessing(df, 'stroke')
 
