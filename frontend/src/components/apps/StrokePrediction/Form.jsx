@@ -53,7 +53,7 @@ export const Form = () => {
   const handleSubmit = (e) => {
     let api_url = "";
     if (import.meta.env.MODE === "production") {
-      api_url = import.meta.env.VITE_APP_API_URL;
+      api_url = `${import.meta.env.VITE_APP_API_URL}api/apps/stroke_prediction/`;
     } else {
       api_url = "http://localhost:8000/api/apps/stroke_prediction/";
     }
@@ -104,6 +104,7 @@ export const Form = () => {
             </FormControl>
 
             <FormControlLabel
+            sx={{ color: "black" }}
               control={
                 <Checkbox
                   name="hypertension"
@@ -114,6 +115,7 @@ export const Form = () => {
               label="Has History of Hypertension"
             />
             <FormControlLabel
+            sx={{ color: "black" }}
               control={
                 <Checkbox
                   name="heart_disease"
@@ -124,7 +126,7 @@ export const Form = () => {
               label="Has History of Heart Disease"
             />
 
-            <FormControlLabel
+            <FormControlLabel sx={{ color: "black" }}
               control={
                 <Checkbox
                   name="ever_married"

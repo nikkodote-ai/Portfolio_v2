@@ -38,7 +38,10 @@ export const StrokePrediction = () => {
 
   
   return (
-    <Box disableGutters sx={{ backgroundColor: "#326164",  height:"100%", width:"100vw"}} >
+    <>
+    <Box  sx={{ backgroundColor: "#326164",  height:"100vh", width:"100vw"}} position="fixed" zindex="0"/>
+
+    <Box disableGutters zindex="1" position="relative">
         <NavBar />
 
         <Box p={2} >
@@ -77,5 +80,6 @@ export const StrokePrediction = () => {
 
 
     </Box>
+    </>
   )
 }
