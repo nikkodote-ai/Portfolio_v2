@@ -54,7 +54,7 @@ export const Form = () => {
 
   const handleSubmit = (e) => {
     let api_url ="";
-    if (import.meta.env.REACT_APP_MODE==="production") {
+    if (import.meta.env.MODE==="production") {
     api_url = import.meta.env.REACT_APP_API_URL}
     else {
     api_url = "http://localhost:8000/api/apps/stroke_prediction/"}

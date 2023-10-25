@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 import { Project } from "./Project";
 
 const XsProjectsTypo = styled(Typography)({
-  fontSize: "17.5vw",
+  fontSize: "15.5vw",
   fontFamily: "viaoda libre",
   color: "2e2e2e",
   textTransform: "uppercase",
-  overflow: "hidden",
+  // overflow: "hidden",
   lineHeight: 0.85,
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
+  // position: "absolute",
+  // top: "50%",
+  // left: "50%",
+  // transform: "translate(-50%, -50%)",
 });
 
 const SMProjectsTypo = styled(Typography)({
@@ -32,36 +32,37 @@ export const ProjectList = () => {
   useEffect(() => {
     let data;
     let api_url = "";
-    if (import.meta.env.MODE==="production"){
+    if (import.meta.env.MODE === "production") {
       // WHEN CREATING APP USIGN VITE, USE VITE_... for env variables. if thru create-react-app, use REACT_APP_...
       api_url = import.meta.env.VITE_APP_API_URL;
-      console.log('production mode')
+      console.log("production mode");
       // console.log(import.meta.env.VITE_APP_API_URL)
-  }
-      else {api_url="http://localhost:8000/"}
-      axios
+    } else {
+      api_url = "http://localhost:8000/";
+    }
+    axios
       .get(api_url)
       .then((res) => {
         data = res.data;
         setDetails((details = data));
       })
-      
+
       .catch((err) => console.log(err));
-    });
-    
+  });
+
   return (
     <>
-      <Stack 
+      <Stack
         direction={{ xs: "column", sm: "row" }}
         sx={{
           width: "100vw",
           backgroundColor: "#ffffff",
           m: 0,
-          p:0,
-          b:0
+          p: 0,
+          b: 0,
         }}
       >
-        <Stack flex={1} >
+        <Stack flex={1}>
           <Box
             display={{ xs: "none", sm: "flex" }}
             justifyContent={"center"}
@@ -72,18 +73,23 @@ export const ProjectList = () => {
             component="div"
           >
             <Box pt={10}>
-            <SMProjectsTypo>Projects</SMProjectsTypo>
+              <SMProjectsTypo>Projects</SMProjectsTypo>
             </Box>
           </Box>
           <Box
-            display={{ sm: "none" }}
+            display={{ xs: "flex", sm: "none" }}
             position="relative"
-            justifyContent={"center:"}
+            justifyContent={"center"}
             textAlign={"center"}
+            alignContent={"center"}
+            alignItems={"center"}
             height="25vh"
             width="100vw"
           >
+            <Box>
+
             <XsProjectsTypo>Projects</XsProjectsTypo>
+            </Box>
           </Box>
         </Stack>
         <Stack
