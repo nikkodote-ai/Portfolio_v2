@@ -66,9 +66,9 @@ const skills = ["Software Development", "Data Science", "Data Analytics", "Web D
           direction="column"
           sx={{ backgroundColor: "#FFB811" }}
         >
-          <Box  textAlign={"center"}>
+          <Box  textAlign={"center"} pb={1}>
           <Header display={{xs:"none", l:"flex"}} pl={4} fontSize={{xs:"1rem", md: "2vw"}} m={2.5}> LANGUAGES</Header>
-          <HeaderXS display = {{xs:"flex", l:"none"}} pl={4} fontSize={{xs:"1rem", md: "2vw"}} m={2.5}> LANGUAGES</HeaderXS>
+          <HeaderXS display = {{xs:"flex", l:"none"}} pl={4} fontSize={{xs:"1rem", md: "2vw"}} m={1}> LANGUAGES</HeaderXS>
       
       <Stack direction="column" textAlign={"center"}>
 
@@ -83,12 +83,12 @@ const skills = ["Software Development", "Data Science", "Data Analytics", "Web D
   
         </Stack>
         <Stack flex={{xs: 1, l:0.6}} direction="column" display="flex" >
-            <Box
+            <Box pb={1}
             
             sx={{ backgroundColor: "#FF3D00", width: "100%", height: "100%",
               justifyContent: "center", textAlign: "center", position: "relative" }}>
 
-<Header pl={4} mt={{xs: 2, l:8}} mb={2} fontSize={{xs:"9vw", md: "2vw"}}>SKILLS</Header>
+<Header pl={4} mt={{xs: 1, l:8}} mb={1} fontSize={{xs:"9vw", md: "2vw"}}>SKILLS</Header>
 
 
     {skills.map((skill, id) => (
