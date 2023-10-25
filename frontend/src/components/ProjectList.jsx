@@ -6,7 +6,7 @@ import { Project } from "./Project";
 const XsProjectsTypo = styled(Typography)({
   fontSize: "15.5vw",
   fontFamily: "viaoda libre",
-  color: "2e2e2e",
+  color: "#2e2e2e",
   textTransform: "uppercase",
   // overflow: "hidden",
   lineHeight: 0.85,
@@ -19,7 +19,7 @@ const XsProjectsTypo = styled(Typography)({
 const SMProjectsTypo = styled(Typography)({
   fontSize: "23vh",
   fontFamily: "viaoda libre",
-  color: "2e2e2e",
+  color: "#2e2e2e",
   textTransform: "uppercase",
   wordBreak: "break-word",
   lineHeight: 0.85,
@@ -72,7 +72,7 @@ export const ProjectList = () => {
             width={{ xs: "100vw", sm: "50%" }}
             component="div"
           >
-            <Box pt={10}>
+            <Box pt={10} >
               <SMProjectsTypo>Projects</SMProjectsTypo>
             </Box>
           </Box>

@@ -14,7 +14,7 @@ export const Home = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 5500);
   }, []);
 
   // const backgroundBox = styled(Box)({

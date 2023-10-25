@@ -7,7 +7,7 @@ import {
   FormGroup,
   TextField,
   styled,
-  Typography
+  Typography,
 } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
@@ -27,43 +27,43 @@ export const Form = () => {
     bmi: "",
   });
 
-
-  const ResultTypo=styled(Typography)({
+  const ResultTypo = styled(Typography)({
     fontFamily: "dela gothic one",
-    color:"#555555",
-    fontSize:"3rem",
-  })
-    
+    color: "#555555",
+    fontSize: "3rem",
+  });
 
   const [result, setResult] = useState(0);
 
   const [showResult, setShowResult] = useState(false);
 
   const handleChange = (e) => {
-    if (    e.target.type === "checkbox" )
-    {setValues((prev) => {
-      return { ...prev, [e.target.name]: e.target.checked };
-    })} else
-    {
-    const { name, value } = e.target;
-    setValues((prev) => {
-      return { ...prev, [name]: value };
-    });
-  }
+    if (e.target.type === "checkbox") {
+      setValues((prev) => {
+        return { ...prev, [e.target.name]: e.target.checked };
+      });
+    } else {
+      const { name, value } = e.target;
+      setValues((prev) => {
+        return { ...prev, [name]: value };
+      });
+    }
   };
 
   const handleSubmit = (e) => {
-    let api_url ="";
-    if (import.meta.env.MODE==="production") {
-    api_url = import.meta.env.REACT_APP_API_URL}
-    else {
-    api_url = "http://localhost:8000/api/apps/stroke_prediction/"}
+    let api_url = "";
+    if (import.meta.env.MODE === "production") {
+      api_url = import.meta.env.VITE_APP_API_URL;
+    } else {
+      api_url = "http://localhost:8000/api/apps/stroke_prediction/";
+    }
     e.preventDefault(
-      axios.post(api_url, values)
+      axios
+        .post(api_url, values)
         .then((response) => setResult(response.data.prediction))
         // .then((data) => setResult(data.prediction))
         .then(() => setShowResult(true))
-        // .catch((error) => console.log("Authorization failed: " + error.message))
+      // .catch((error) => console.log("Authorization failed: " + error.message))
     );
 
     // console.log(values);
@@ -75,12 +75,14 @@ export const Form = () => {
       width={{ xs: "90vw", md: "50vw" }}
       backgroundColor="white"
       borderRadius={2}
-      
     >
-         <Box m={5.5} display={showResult ? "flex" : "none"}>
-        <ResultTypo>{result===0? "You are unlikely to have a stroke" : "You are LIKELY to have a stroke"}</ResultTypo>
-        
-         </Box>
+      <Box m={5.5} display={showResult ? "flex" : "none"}>
+        <ResultTypo>
+          {result === 0
+            ? "You are unlikely to have a stroke"
+            : "You are LIKELY to have a stroke"}
+        </ResultTypo>
+      </Box>
       <Box
         textAlign={"left"}
         justifyContent={"center"}
@@ -102,37 +104,36 @@ export const Form = () => {
             </FormControl>
 
             <FormControlLabel
-                control={
-                  <Checkbox
-                    name="hypertension"
-                    onChange={handleChange}
-                    color="success"
-                  />
-                }
-                label="Has History of Hypertension"
-              />
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    name="heart_disease"
-                    onChange={handleChange}
-                    color="success"
-                  />
-                }
-                label="Has History of Heart Disease"
-              />
+              control={
+                <Checkbox
+                  name="hypertension"
+                  onChange={handleChange}
+                  color="success"
+                />
+              }
+              label="Has History of Hypertension"
+            />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="heart_disease"
+                  onChange={handleChange}
+                  color="success"
+                />
+              }
+              label="Has History of Heart Disease"
+            />
 
-
-              <FormControlLabel
-                control={
-                  <Checkbox
-                    name="ever_married"
-                    onChange={handleChange}
-                    color="success"
-                  />
-                }
-                label="Ever Married"
-              />
+            <FormControlLabel
+              control={
+                <Checkbox
+                  name="ever_married"
+                  onChange={handleChange}
+                  color="success"
+                />
+              }
+              label="Ever Married"
+            />
 
             <TextField
               name="avg_glucose_level"
