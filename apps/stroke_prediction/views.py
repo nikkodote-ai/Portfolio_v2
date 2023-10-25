@@ -8,7 +8,7 @@ import pandas as pd
 import numpy as np
 # load pickle locally and remotely
 from urllib.request import urlopen
-from sklearn.externals import joblib
+import joblib
 # turn model prediction to proper JSON HTTP response
 from django.http import JsonResponse
 # read environmental variables
