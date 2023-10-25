@@ -90,7 +90,7 @@ if os.environ['PRODUCTION'] == "True":
         "default": dj_database_url.config(default=os.environ["DATABASE_URL"])
     }
 
-    ALLOWED_HOSTS = ["www.nikkodote.com"]
+    ALLOWED_HOSTS = ["216.24.57.1", "nikkodote.com", "www.nikkodote.com"]
 
 
 else:

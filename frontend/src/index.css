@@ -21,6 +21,7 @@
   --dark-gradient: linear-gradient(90deg, #2f2f2f, #2f2f2f);
   --dark-gradient-reverse: linear-gradient(45deg,#E3D7BD, #EBE6D9, #F6F3E7, #F1F1F1, #F0E2CE, #D3D0C9);
   --bright-orange: linear-gradient(90deg, #FF5733, #ffa500);
+  --contact-bg: linear-gradient(90deg, #013080, #815288, #ff5558 #fe4c01, #ff8a0a, #ff8a01,  #ffa500);
 }
 
 a {
@@ -52,6 +53,12 @@ body {
 
 #fade-button{
   background-image: var(--bright-orange);
+  animation: bg-animation 25s infinite alternate;
+  background-attachment: fixed;
+}
+
+.contact-background{
+  background-image: var(--contact-bg);
   animation: bg-animation 25s infinite alternate;
   background-attachment: fixed;
 }

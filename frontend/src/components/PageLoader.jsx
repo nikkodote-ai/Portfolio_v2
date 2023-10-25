@@ -16,14 +16,13 @@ export const PageLoader = (props) => {
         <Stack direction="column" spacing={4}>
           <Box width="70vw" zIndex={1} container spacing={3}>
           
-        <Typography mb={2.5} lineHeight={0.9} sx={{color:"#ff8652", fontFamily:"inter", fontSize:"4.5rem", fontWeight:"bold"}}>
+          <Typography mb={2.5} lineHeight={0.9} sx={{color:"#ff8652", fontFamily:"inter", fontSize:{xs:"3.5rem", sm:"4.5rem"}, fontWeight:"bold"}}>
           Hey! I&apos;m Nikko!</Typography>
 
-
-          <Typography mb={2.5} lineHeight={0.9} sx={{color:"#62d0ff", fontFamily:"inter", fontSize:"3rem", fontWeight:"bold"}}>
+          <Typography mb={2.5} lineHeight={0.9} sx={{color:"#62d0ff", fontFamily:"inter", fontSize:{xs:"2rem", sm:"3rem"}, fontWeight:"bold"}}>
           welcome to my playground.</Typography>
 
-          <Typography lineHeight={0.9} fontStyle="italic" sx={{color:"#ff8652", fontFamily:"viaoda libre", fontSize:"2rem", fontWeight:"bold"}}>
+          <Typography lineHeight={0.9} fontStyle="italic" sx={{color:"#ff8652", fontFamily:"viaoda libre", fontSize:{xs:"1.5rem", sm:"2rem"}, fontWeight:"bold"}}>
           this site is made from django | python, react | js, MUI and a lot of love.
           </Typography>
 

@@ -6,7 +6,7 @@ export const Contact = () => {
   return (
     <Box height={"100vh"} width={"100vw"} position="relative" sx={{backgroundColor: {xs:"white", sm:"#222222"}}}>
       <NavBar/>
-    <Box backgroundColor="white" p={{xs:0, sm:15}} position="absolute" top={"10%"} left={0} right={0} sx={{ml:"auto", mr:"auto"}} width="50vw" textAlign={"center"} style={{color: 'black'}} display="flex">
+    <Box backgroundColor="white" p={{xs:0, sm:12}} position="absolute" top={"13%"} left={0} right={0} sx={{ml:"auto", mr:"auto"}} width={{xs: "85vw", sm: "60vw", md: "50vw"}} textAlign={"center"} style={{color: 'black'}} display="flex">
     {/* <Typography>Contact Me! <KeyboardDoubleArrowDown/> </Typography> */}
 
         <Stack direction="column" justifyContent={"center"} alignContent={"center"}  spacing={3}>
@@ -14,7 +14,10 @@ export const Contact = () => {
           <a className="menu" href={`mailto:nikkodote.ai@gmail.com`} rel="noopener noreferrer">
 
    <Stack direction = "row" spacing={1}>
-    <Email fontSize="large" /> <Typography variant="h6" fontFamily={"dela gothic one"}>Email: nikkodote.ai@gmail.com</Typography>
+    <Email fontSize="large" />
+    <Typography display={{xs:"none", sm:"flex"}} variant="h6" fontFamily={"dela gothic one"}>Email: nikkodote.ai@gmail.com</Typography>
+    <Typography display={{xs:"flex", sm:"none"}} variant="h6" fontFamily={"dela gothic one"}>Email</Typography>
+
             </Stack>
           </a>
             

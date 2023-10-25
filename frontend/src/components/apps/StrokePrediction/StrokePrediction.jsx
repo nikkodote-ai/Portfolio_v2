@@ -38,13 +38,13 @@ export const StrokePrediction = () => {
 
   
   return (
-    <Box disableGutters p={2} sx={{ backgroundColor: "#326164",  height:"100vh", width:"100vw"}} >
+    <Box disableGutters sx={{ backgroundColor: "#326164",  height:"100%", width:"100vw"}} >
         <NavBar />
 
-        <Box p={3} >
+        <Box p={2} >
         <Stack direction={"column"} spacing={2} justifyContent={"center"} textAlign={"center"} alignItems={"center"} display={"flex"}>
             <Title sx={{fontSize:{
-                xs:"2.2rem",
+                xs:"2rem",
                 md:"4rem"
             }}}>Stroke Prediction</Title>
             <Line/>
@@ -65,7 +65,7 @@ export const StrokePrediction = () => {
             </Box>
             <Stack spacing={3} width="60vw" direction={{xs:"column", sm:"row"}} justifyContent={"center"} alignItems={"center"} textAlign={"center"} >
         
-        <Box flex={1}  justifyContent={"center"} textAlign={'center'} alignItems={'center'} display={"flex"}  pb={4}>
+        <Box flex={1}  justifyContent={"center"} textAlign={'center'} alignItems={'center'} display={"flex"}  pb={10}>
 
         <Form />
         </Box>
