@@ -40,12 +40,12 @@ export const AboutMe = () => {
 
   const AboutMeContent = `I'm a dedicated medical scientist, software developer, and machine
   learning engineer passionate about revolutionizing healthcare
-  through technology. I bridge medicine and technology to create
-  innovative, patient-centered solutions. My mission is to make
-  healthcare more accessible and efficient through data-driven
+  through technology. I have postgraduate degrees in Biomedical Sciences and in Computer Science. I bridge medicine and technology to create
+  innovative, client-centered solutions. My mission is to make
+  you industry more accessible and efficient through data-driven
   insights and cutting-edge tech. I'm an advocate for
   interdisciplinary collaboration and lifelong learning in
-  healthcare innovation.`;
+  innovation.`;
 
   return (
     <>
