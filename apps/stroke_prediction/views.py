@@ -19,7 +19,7 @@ if os.environ['PRODUCTION'] == "True":
     model = joblib.load(urlopen(os.environ['MODEL_URL']))
     print("Remote Model Successfully Loaded")
 else:
-    model = joblib.load(open('../model_stroke.pkl', 'rb'))
+    model = joblib.load(open('C:/Users/nikko/OneDrive/Desktop/Professional_Portfolio/portfolio/apps/stroke_prediction/model_stroke.pkl', 'rb'))
     print('Local Model loaded')
 class StrokeView(APIView):
     serializer_class = StrokeSerializer
