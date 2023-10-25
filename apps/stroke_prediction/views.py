@@ -11,10 +11,11 @@ import os
 
 model = None
 if os.environ['PRODUCTION'] == "True":
-    model = "model_stroke.pkl"
+    model = os.environ['MODEL_URL']
+    print("Remote Model Successfully Loaded")
 else:
     model = pickle.load(open('C:/Users/nikko/OneDrive/Desktop/Professional_Portfolio/portfolio/apps/stroke_prediction/model_stroke.pkl', 'rb'))
-print('Model loaded')
+    print('Local Model loaded')
 class StrokeView(APIView):
     serializer_class = StrokeSerializer
 
