@@ -9,7 +9,7 @@ export const ContactMe = () => {
     <Box  textAlign={"center"} style={{color: 'white'}} m={0} display="grid">
     {/* <Typography>Contact Me! <KeyboardDoubleArrowDown/> </Typography> */}
         <Stack direction="row" justifyContent={"center"} alignContent={"center"}  spacing={8}>
-          <a className="contact-icons" href={`mailto:nikkodote.ai@gmail.com`} rel="noopener noreferrer">
+          <a className="contact-icons" href={`mailto:nikko@nikkodote.com`} rel="noopener noreferrer">
 
    <Email  fontSize='large'/>
           </a>

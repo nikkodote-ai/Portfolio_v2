@@ -11,11 +11,11 @@ export const Contact = () => {
 
         <Stack direction="column" justifyContent={"center"} alignContent={"center"}  spacing={3}>
     <Typography fontSize={{xs:"4rem", sm: "5rem"}} fontFamily={"viaoda libre"}>Contact Me!</Typography>
-          <a className="menu" href={`mailto:nikkodote.ai@gmail.com`} rel="noopener noreferrer">
+          <a className="menu" href={`mailto:nikko@nikkodote.com`} rel="noopener noreferrer">
 
    <Stack direction = "row" spacing={1}>
     <Email fontSize="large" />
-    <Typography display={{xs:"none", sm:"flex"}} variant="h6" fontFamily={"dela gothic one"}>Email: nikkodote.ai@gmail.com</Typography>
+    <Typography display={{xs:"none", sm:"flex"}} variant="h6" fontFamily={"dela gothic one"}>Email: nikko@nikkodote.com</Typography>
     <Typography display={{xs:"flex", sm:"none"}} variant="h6" fontFamily={"dela gothic one"}>Email</Typography>
 
             </Stack>
