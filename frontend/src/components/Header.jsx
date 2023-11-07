@@ -65,7 +65,7 @@ export const Header = () => {
             contain: "paint",            
           }}
           component={motion.div}
-          style={{ y:{md: bigTextY}, x: {md: bigTextX}}}
+          style={{ y: bigTextY, x: bigTextX}}
         >
           SCIENTIST.PROGRAMMER
         </StyledTypography>
@@ -79,8 +79,8 @@ export const Header = () => {
             position: "relative",
             mb: 4,
           }}
-          component={motion.h1}
-          style={{ y:{md: smallTextY} }}
+          // component={motion.h1}
+          // style={{ y:smallTextY }}
         >
           NIKKO DOTE
         </StyledTypography>
@@ -95,8 +95,8 @@ export const Header = () => {
             contain: "paint",  
             lineHeight: "1em",          
           }}
-          component={motion.div}
-          style={{ y:{md: bigTextY}, x: {md: bigTextX}}}
+          // component={motion.div}
+          // style={{ y: bigTextY, x: bigTextX}}
         >
           SCIENTIST
         </StyledTypography>
@@ -115,8 +115,8 @@ export const Header = () => {
             m:-4
 
           }}
-          component={motion.div}
-          style={{ y:{md: bigTextY}, x: {md: bigTextX}}}
+          // component={motion.div}
+          // style={{ y: bigTextY, x: bigTextX}}
         >
           &
         </Typography>
@@ -130,8 +130,8 @@ export const Header = () => {
             contain: "paint",  
             lineHeight: "1em",          
           }}
-          component={motion.div}
-          style={{ y:{md: bigTextY}, x: {md:bigTextX}}}
+          // component={motion.div}
+          // style={{ y: bigTextY, x: bigTextX}}
         >
           PROGRAMMER
         </StyledTypography>
@@ -146,7 +146,7 @@ export const Header = () => {
           inset="0px"
           top= {{xs: "-33vh",md:"-27vh"}}
           component={motion.div}
-          style={{ y:{md: contactMeY }}}
+          style={{ y: contactMeY }}
         >
           <StyledTypography sx={{
             fontSize: "1.2rem",
