@@ -24,7 +24,7 @@ export const ContactMe = () => {
             
           </a>
 
-          <a  className="contact-icons" href="https://www.instagram.com/thenikkodote/">
+          <a  className="contact-icons" href="https://www.instagram.com/bynikkodote/">
             
     <Instagram fontSize="large" />
           </a>
